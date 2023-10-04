@@ -13,7 +13,7 @@ int main(void) {
     char str[80];
     gets(str);
     char temp = str[0];
-    int len = strlen(str), count = 1, max = 1;
+    int len = (int)strlen(str), count = 1, max = 1;
     
     for(int i = 1; i < len + 1; i++){
         if (str[i] == temp)
