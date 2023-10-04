@@ -12,7 +12,7 @@ int maximum(int a, int b){
 int main(void) {
     char str[80];
     gets(str);
-    int len = strlen(str), count = 0, max = 0;
+    int len = (int)strlen(str), count = 0, max = 0;
     
     for(int i = 0; i < len; i++){
         if (str[i] == ' ')
