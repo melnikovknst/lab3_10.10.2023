@@ -11,7 +11,7 @@ int maximum(int a, int b){
 
 int main(void) {
     char str[80];
-    gets(str);
+    fgets(str, sizeof(str), stdin);
     int len = (int)strlen(str), count = 0, max = 0;
     
     for(int i = 0; i < len; i++){
