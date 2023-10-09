@@ -11,16 +11,17 @@ int min(int num1, int num2){
 
 
 int min_word(char *str){
-    int answer = 100, len = (int)strlen(str) - 1, start = 0;
-    str[len] = '\0';
+    int answer = 100, len = (int)strlen(str), start = 0;
+    str[len - 1] = ' ';
     
     for (int i = 0; i < len; i++){
-        if (str[i] == ' '){
+        if (str[i] == ' ' && i - start == 0)
+            start = i + 1;
+        else if (str[i] == ' '){
             answer = min(answer, i - start);
             start = i + 1;
         }
     }
-    answer = min(answer, len - start);
     
     return answer;
 }
@@ -33,13 +34,3 @@ int main(void) {
     printf("%d\n", min_word(str));
     return 0;
 }
-
-
-
-
-
-// if (str[i] == ' '){
-//             if (i - start != 0)
-//                 answer = min(answer, i - start);
-//             start = i + 1;
-//         }
