@@ -5,7 +5,6 @@
 int min(int num1, int num2){
     if (num1 < num2)
         return num1;
-    
     return num2;
 }
 
@@ -17,6 +16,7 @@ int min_word(char *str){
     for (int i = 0; i < len; i++){
         if (str[i] == ' ' && i - start == 0)
             start = i + 1;
+            
         else if (str[i] == ' '){
             answer = min(answer, i - start);
             start = i + 1;
