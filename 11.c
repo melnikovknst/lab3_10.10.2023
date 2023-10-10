@@ -24,7 +24,6 @@ int game(char *towns){
 int main(void) {
     char towns[200];
     fgets(towns, sizeof(towns), stdin);
-    towns[(int)strlen(towns) - 1] = ' ';
         
     if (game(towns) % 2 ==0)
         printf("Vanya won\n");
