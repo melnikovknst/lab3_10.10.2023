@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+#include <limits.h>
 
 int min(int num1, int num2){
     if (num1 < num2)
@@ -10,7 +10,7 @@ int min(int num1, int num2){
 
 
 void minWord(char *str){
-    int answer = 100, len = (int)strlen(str), start = 0, word = 0;
+    int answer = INT_MAX, len = (int)strlen(str), start = 0, word = 0;
     str[len - 1] = ' ';
 
     for (int i = 0; i < len; i++){
