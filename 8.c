@@ -9,7 +9,7 @@ int min(int num1, int num2){
 }
 
 
-void min_word(char *str){
+void minWord(char *str){
     int answer = 100, len = (int)strlen(str), start = 0, word = 0;
     str[len - 1] = ' ';
 
@@ -36,7 +36,7 @@ void min_word(char *str){
 
 void sort(char *str, int words){
     for (int i = 0; i < words; i ++){
-        min_word(str);
+        minWord(str);
         printf(" ");
     }
     printf("\n");
