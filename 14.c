@@ -14,8 +14,10 @@ void guess_letter(char *word, char *str, int *won, int *count){
     
     printf("%s\n\n", str);
     
-    if (*count > 9)
+    if (*count > 9){
         *won = -1;
+        printf("Lose\n");
+    }
 }
 
 
@@ -23,10 +25,14 @@ void guess_word(char *word, int *won){
     char input[50];
     scanf("%s", input);
     
-    if (strcmp(input, word) == 0)
+    if (strcmp(input, word) == 0){
         *won = 1;
-    else
+        printf("Victory\n");
+    }
+    else{
         *won = -1;
+        printf("Lose\n");
+    }
 }
 
 
@@ -58,11 +64,6 @@ int main(void) {
             
         count += 1;
     }
-    
-    if (won == 1)
-        printf("Victory\n");
-    else
-        printf("Lose\n");
     
     return 0;
 }
